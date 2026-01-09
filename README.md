@@ -63,6 +63,15 @@ This creates an out/ folder that can be uploaded to any static hosting provider.
     Files in public/ remain accessible directly (e.g. /images/MediUitleg.png).
 The site was tested and deployed successfully on Hostinger.
 
+# To-do:
+- Add animated elements to title page
+- Change header visibility (inversing colors depending on background?) o
+- Fix the gallery (!) o
+- Fix project reaching (!) o
+- Add new project
+- Figure out hosting
+- Responsive design o
+
 # License:
 All rights reserved © 2025
 Design and development by Hanga Kovács

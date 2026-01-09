@@ -80,15 +80,15 @@ export default function Home() {
             return (
               <motion.div
                 key={p.id}
-                className="project-slide"
-                animate={{
-                  opacity: isActive ? 1 : 0,
-                  x: isActive ? 0 : isActive ? 0 : 20,
-                }}
-                transition={{ duration: 0.28, ease: "easeOut" }}
-                style={{
-                  pointerEvents: isActive ? "auto" : "none",
-                }}
+                  className="project-slide"
+                  animate={{
+                    opacity: isActive ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.28, ease: "easeOut" }}
+                  style={{
+                    pointerEvents: isActive ? "auto" : "none",
+                    zIndex: isActive ? 2 : 1, // 👈 THIS FIXES IT
+                  }}
               >
                 <div className="project-left">
                   <div className="project-index">{p.index}</div>

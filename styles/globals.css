@@ -54,6 +54,7 @@ body {
 /**********/
 
 header {
+  mix-blend-mode: difference;
   font-family: var(--text);
   font-size: 1em;
   padding: 23px 60px;
@@ -164,7 +165,7 @@ header {
   height: 110vh;
   position: relative;
   display: block;
-  overflow: hidden;
+
 }
 
 /* Main title (UI/UX INTERACTIVE) */
@@ -259,7 +260,7 @@ header {
 
 /* textual meta */
 .project-index { font-family: var(--text); font-size: 1.1rem; opacity: 0.8; margin-bottom: 12px; }
-.project-name { font-family: var(--text); font-size: 1.6rem; margin: 0 0 12px 0; max-width: 320px; }
+.project-name { font-family: var(--text); font-size: 1.6rem; margin: 0 0 12px 0;}
 .project-client { opacity: 0.7; margin: 0 0 18px 0; }
 
 /* See more link */
@@ -289,7 +290,7 @@ header {
 
 .project-image-wrap {
   position: relative;
-  left: 50%;
+  left: 47%;
   height: 100vh;
   display: block;
   width: 50vw; /* ensure it doesn't exceed half viewport */
@@ -320,7 +321,7 @@ header {
 
 .project-arrows {
   position: absolute;
-  right: 60px;
+  right: 6%;
   bottom: 24px;
   display: flex;
   gap: 10px;
@@ -328,6 +329,7 @@ header {
 }
 
 .arrow-btn {
+  padding-bottom: 5px;
   width: 44px;
   height: 44px;
   border-radius: 999px;
@@ -471,6 +473,10 @@ video {
   margin-bottom: 60px;
 }
 
+.gallery-page h1 {
+  padding-bottom: 30px;
+}
+
 /* Gallery grid container */
 .gallery-grid {
   display: grid;
@@ -534,7 +540,7 @@ video {
   gap: 80px;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 100px 40px;
+  padding: 5% 5%;
   color: var(--white);
   font-family: var(--text);
 }
@@ -625,4 +631,223 @@ video {
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+
+/************************/
+/* GLOBAL RESPONSIVE FIX */
+/************************/
+
+@media (max-width: 1024px) {
+  body {
+    background-size: 100% 100%;
+  }
+
+  header {
+    padding: 20px 30px;
+  }
+
+  .footer-container {
+    padding: 30px 40px;
+  }
+}
+
+/************************/
+/* MOBILE (PHONES) */
+/************************/
+
+@media (max-width: 600px) {
+
+  /* ---------- HEADER ---------- */
+  header {
+    padding: 18px 20px;
+    font-size: 0.9em;
+  }
+
+  header nav {
+    gap: 14px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-title {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    font-size: 4.2rem;
+    padding: 120px 20px 0;
+  }
+
+  .hero-designer {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    font-size: 4.2rem;
+    padding: 10px 20px 0;
+    -webkit-text-stroke: 1px var(--white);
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .projects-wrapper {
+    margin-top: 120px;
+  }
+
+  .projects-title {
+    position: relative;
+    font-size: 4rem;
+    left: 0;
+    top: 0;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  .projects-sticky {
+    position: relative;
+    height: auto;
+  }
+
+  .project-slide {
+    position: relative;
+    opacity: 1 !important;
+    pointer-events: auto;
+    grid-template-columns: 1fr;
+    padding: 0 20px 80px;
+  }
+
+  .project-left {
+    margin-left: 0;
+    padding-top: 0;
+    height: auto;
+  }
+
+  .project-name {
+    font-size: 1.3rem;
+  }
+
+  .see-more {
+    margin-right: 0;
+  }
+
+  .project-image-wrap {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .project-image {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-arrows {
+    position: relative;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* ---------- PROJECT DETAIL PAGE ---------- */
+  .project-page {
+    padding: 40px 20px 80px;
+    gap: 60px;
+  }
+
+  .project-main-title {
+    font-size: 3.6rem;
+  }
+
+  .project-intro {
+    width: 100%;
+  }
+
+  .project-section p,
+  .project-section h2 {
+    margin-left: 0;
+  }
+
+  .project-split-text {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-split-text h2 {
+    width: auto;
+  }
+
+  .project-split-image {
+    flex-direction: column;
+  }
+
+  .project-split-image img,
+  .project-split-image video {
+    max-height: none;
+    width: 100%;
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-page {
+    font-size: 3.5rem;
+    padding: 40px 20px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+  }
+
+  .about-title {
+    font-size: 4rem;
+    margin-bottom: 30px;
+  }
+
+  .about-paragraph {
+    font-size: 1em;
+  }
+
+  .about-links {
+    gap: 40px;
+    font-size: 1.4em;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    gap: 40px;
+  }
+
+  .footer-middle {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-right {
+    font-size: 0.8em;
+  }
 }
