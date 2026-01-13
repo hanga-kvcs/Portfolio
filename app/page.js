@@ -72,7 +72,7 @@ export default function Home() {
           className="projects-sticky"
           style={{ position: "sticky", top: 0, height: "100vh", overflow: "hidden" }}
         >
-          <h1 className="projects-title">PROJETS</h1>
+          <h1 className="projects-title">PROJECTS</h1>
 
           {/* Slides: render all slides, only active is interactive */}
           {projects.map((p, i) => {
@@ -87,7 +87,7 @@ export default function Home() {
                   transition={{ duration: 0.28, ease: "easeOut" }}
                   style={{
                     pointerEvents: isActive ? "auto" : "none",
-                    zIndex: isActive ? 2 : 1, // 👈 THIS FIXES IT
+                    zIndex: isActive ? 2 : 1,
                   }}
               >
                 <div className="project-left">
