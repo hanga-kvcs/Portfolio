@@ -1,5 +1,5 @@
 "use client";
-import Layout from "@/components/Layout";
+import Layout from "../../../components/Layout";
 import { motion } from "framer-motion";
 
 export default function LowLiteracyApp() {
