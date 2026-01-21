@@ -8,6 +8,9 @@
   --black: #0F0F0F;
   --title: 'Anton SC';
   --text: 'BDO Grotesk';
+
+  --background: var(--black);
+  --foreground: var(--white);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #0F0F0F;
 }
 
 
