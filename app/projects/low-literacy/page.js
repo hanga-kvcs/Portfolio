@@ -109,7 +109,7 @@ className="project-page"
         </p>
       </div>
     </div>
-    <video width="320" height="240" controls>
+    <video autoPlay loop muted playsInline width="320" height="240" controls>
       <source src="/images/MediUitleg_demo.mp4" type="video/mp4"></source>
     </video>
 

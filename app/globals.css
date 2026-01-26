@@ -172,6 +172,32 @@ header {
 
 }
 
+.hero-deco {
+  position: absolute;
+  pointer-events: none; /* never block text */
+  z-index: 5; /* above text, below header */
+}
+
+/* Sun */
+.hero-sun {
+  top: 0%;
+  left: 4%;
+  width: 400px;
+  transform: rotate(-8deg);
+       outline: 2px solid red;
+
+}
+
+/* Star */
+.hero-star {
+  top: 10%;
+  right: 4%;
+  width: 350px;
+  transform: rotate(6deg);
+
+}
+
+
 /* Main title (UI/UX INTERACTIVE) */
 .hero-title {
   position: absolute;
@@ -854,4 +880,18 @@ video {
   .footer-right {
     font-size: 0.8em;
   }
+
+  .hero-sun {
+    width: 140px;
+    top: 12%;
+    left: 4%;
+  }
+
+  .hero-star {
+    width: 140px;
+    top: 26%;
+    right: 4%;
+  }
 }
+
+

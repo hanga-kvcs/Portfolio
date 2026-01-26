@@ -10,9 +10,19 @@ export default function Home() {
 
   // Project data (images are in /public/images)
   const projects = [
+      {
+      id: "covid",
+      index: "01",
+      title: "Branding for Long COVID app",
+      client: "Fontys Delta",
+      year: "2025",
+      img: "/images/covid_1_bw.png",
+      imgHover: "/images/covid_1.png",
+      href: "/projects/covid/",
+    },
     {
       id: "low-literacy",
-      index: "01",
+      index: "02",
       title: "App to help low literate people",
       client: "Mindlabs / The Tailors",
       year: "2025",
@@ -22,7 +32,7 @@ export default function Home() {
     },
     {
       id: "noise",
-      index: "02",
+      index: "03",
       title: "Noise Control",
       client: "Lectorate Fontys ICT / Fontys Paramedic",
       year: "2024",
@@ -32,7 +42,7 @@ export default function Home() {
     },
     {
       id: "eartag",
-      index: "03",
+      index: "04",
       title: "AI Research",
       client: "DAP Thewi",
       year: "2024",
@@ -55,8 +65,30 @@ export default function Home() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="hero" style={{ height: "100vh" }}>
-        <h1 className="hero-title">UI/UX <br /> INTERACTIVE</h1>
+      <section className="hero" style={{ height: "100vh", position: "relative" }}>
+        {/* Decorative elements */}
+        <motion.img
+          src="/images/sun.png"
+          alt=""
+          className="hero-deco hero-sun"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        />
+
+        <motion.img
+          src="/images/star.png"
+          alt=""
+          className="hero-deco hero-star"
+          initial={{ opacity: 0, rotate: -10 }}
+          animate={{ opacity: 1, rotate: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
+
+        {/* Text */}
+        <h1 className="hero-title">
+          UI/UX <br /> INTERACTIVE
+        </h1>
         <h1 className="hero-designer">DESIGNER</h1>
       </section>
 
