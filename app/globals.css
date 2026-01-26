@@ -184,8 +184,6 @@ header {
   left: 4%;
   width: 400px;
   transform: rotate(-8deg);
-       outline: 2px solid red;
-
 }
 
 /* Star */
@@ -194,7 +192,6 @@ header {
   right: 4%;
   width: 350px;
   transform: rotate(6deg);
-
 }
 
 
